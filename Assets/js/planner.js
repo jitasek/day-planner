@@ -6,9 +6,9 @@ $(document).ready(function () {
   // click listener for saveBtn
   $(".saveBtn").on("click", function () {
     console.log(this);
-    //setting values of user input and time in local storage
+    //setting values of user input and time in local storage - content gets copied into the save button
     var text = $(this).siblings(".description").val();
-    var time = $(this).parent().attr("id");
+    var time = $(this).parent().attr("id"); // need to go 1 level up to get to id
 
     localStorage.setItem(time, text);
   });
@@ -18,9 +18,38 @@ $(document).ready(function () {
   $("#10am.description").val(localStorage.getItem("10am"));
   $("#11am.description").val(localStorage.getItem("11am"));
   $("#12am.description").val(localStorage.getItem("12am"));
-  $("#1pm.description").val(localStorage.getItem("1pm"));
-  $("#2pm.description").val(localStorage.getItem("2pm"));
-  $("#3pm.description").val(localStorage.getItem("3pm"));
   $("#4pm.description").val(localStorage.getItem("4pm"));
   $("#5pm.description").val(localStorage.getItem("5pm"));
+  $("#6pm.description").val(localStorage.getItem("6pm"));
+  $("#7pm.description").val(localStorage.getItem("7pm"));
+  $("#8pm.description").val(localStorage.getItem("8pm"));
+
+  function trackHour() {
+    var currentHour = moment().hour(); // gets the current hour
+
+    // loop over all the hours and check if it is past/present/future hour
+    $(".time-block").each(function () {
+      var rowHourAm = parseInt($(this).attr("id").split(["am"])[0]); // splits the string by "am"
+      var rowHourPm = parseInt($(this).attr("id").split(["pm"])[0]); // splits the string by "pm"
+      console.log(rowHourAm, currentHour);
+      console.log(rowHourPm, currentHour);
+
+      // give the colorings:
+
+      if (rowHourAm < currentHour || rowHourPm < currentHour) {
+        $(this).addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+      } else if (rowHourAm === currentHour || rowHourPm === currentHour) {
+        $(this).addClass("present");
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+      } else {
+        $(this).addClass("future");
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+      }
+    });
+  }
+  trackHour();
 });
