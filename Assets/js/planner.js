@@ -13,16 +13,16 @@ $(document).ready(function () {
     localStorage.setItem(time, text);
   });
 
-  // load data from local storage
-  $("#9am.description").val(localStorage.getItem("9am"));
-  $("#10am.description").val(localStorage.getItem("10am"));
-  $("#11am.description").val(localStorage.getItem("11am"));
-  $("#12am.description").val(localStorage.getItem("12am"));
-  $("#4pm.description").val(localStorage.getItem("4pm"));
-  $("#5pm.description").val(localStorage.getItem("5pm"));
-  $("#6pm.description").val(localStorage.getItem("6pm"));
-  $("#7pm.description").val(localStorage.getItem("7pm"));
-  $("#8pm.description").val(localStorage.getItem("8pm"));
+  // load (saved) data from local storage
+  $("#9am .description").val(localStorage.getItem("9am"));
+  $("#10am .description").val(localStorage.getItem("10am"));
+  $("#11am .description").val(localStorage.getItem("11am"));
+  $("#12am .description").val(localStorage.getItem("12am"));
+  $("#16pm .description").val(localStorage.getItem("16pm"));
+  $("#17pm .description").val(localStorage.getItem("17pm"));
+  $("#18pm .description").val(localStorage.getItem("18pm"));
+  $("#19pm .description").val(localStorage.getItem("19pm"));
+  $("#20pm .description").val(localStorage.getItem("20pm"));
 
   function trackHour() {
     var currentHour = moment().hour(); // gets the current hour
