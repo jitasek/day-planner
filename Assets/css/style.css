@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -28,12 +28,13 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
+  /* border-top: 1px solid black; */
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  border-top: 1px solid black;
 }
 
 .hour {
@@ -58,12 +59,20 @@ textarea {
 }
 
 .saveBtn {
+  /* display: flex; */
   border-left: 1px solid black;
+  border-top: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
 }
+
+/* .fas .fa-save {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+} */
 
 .saveBtn i:hover {
   font-size: 20px;
