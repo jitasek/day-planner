@@ -2,7 +2,7 @@
 
 A simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-Link to the deployed app: TBD
+Link to the deployed app: https://jitasek.github.io/day-planner/
 
 The purpose of this app is to use the Moment.js library in the browser to work with date and time.
 
