@@ -4,7 +4,7 @@ A simple calendar application that allows a user to save events for each hour of
 
 Link to the deployed app: https://jitasek.github.io/day-planner/
 
-The purpose of this app is to use the Moment.js library in the browser to work with date and time.
+The purpose of this app is to use the Moment.js library in the browser to work with date and time, and to practise working with event listeners, jQuery, local storage etc.
 
 User Story<br>
 As an employee with a busy schedule I want to add important events to a daily planner so that I can manage my time effectively.
