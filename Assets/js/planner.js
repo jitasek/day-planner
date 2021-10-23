@@ -18,11 +18,11 @@ $(document).ready(function () {
   $("#10am .description").val(localStorage.getItem("10am"));
   $("#11am .description").val(localStorage.getItem("11am"));
   $("#12am .description").val(localStorage.getItem("12am"));
+  $("#13pm .description").val(localStorage.getItem("13pm"));
+  $("#14pm .description").val(localStorage.getItem("14pm"));
+  $("#15pm .description").val(localStorage.getItem("15pm"));
   $("#16pm .description").val(localStorage.getItem("16pm"));
   $("#17pm .description").val(localStorage.getItem("17pm"));
-  $("#18pm .description").val(localStorage.getItem("18pm"));
-  $("#19pm .description").val(localStorage.getItem("19pm"));
-  $("#20pm .description").val(localStorage.getItem("20pm"));
 
   function trackHour() {
     var currentHour = moment().hour(); // gets the current hour
